@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Workouts</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Workouts</h1>
+
+  <!-- CREATE -->
+  <h2>Workout toevoegen</h2>
+  <form id="add-form">
+    <input type="text" id="title" placeholder="Titel" required />
+    <input type="number" id="reps" placeholder="Reps" required />
+    <input type="number" id="load" placeholder="Load (kg)" required />
+    <button type="submit">Toevoegen</button>
+  </form>
+
+  <!-- UPDATE -->
+  <div id="update-form-container" style="display:none;">
+    <h2>Workout aanpassen</h2>
+    <form id="update-form">
+      <input type="hidden" id="update-id" />
+      <input type="text" id="update-title" required />
+      <input type="number" id="update-reps" required />
+      <input type="number" id="update-load" required />
+      <button type="submit">Opslaan</button>
+      <button type="button" onclick="hideUpdateForm()">Annuleren</button>
+    </form>
+  </div>
+
+  <!-- READ -->
+  <h2>Workouts</h2>
+  <div id="workout-list"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
